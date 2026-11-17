@@ -5,7 +5,7 @@
 - `forecast_solar.ipynb` – notebook with all the code (data -> features -> models -> validation -> submition)
 - `up202511105_forecast.csv` – Submitted forecast (4296 lines)
 - `model_matrix.csv` – matriz de modelos (validação cruzada em blocos mensais, leads 1-24)
-- `requirements_used.txt` – versões das bibliotecas
+- `requirements_used.md` – library versions
 
 ## How to reproduce
 1. Put all the files in the same folder: `Solar_dataset_train.csv`, `Solar_dataset_test.csv`, `submission_template.csv`, `check_submission.py`.
