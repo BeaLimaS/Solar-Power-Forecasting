@@ -3,6 +3,7 @@
 
 ## Files
 - `forecast_solar.ipynb` – notebook with all the code (data -> features -> models -> validation -> submition)
+- `forecast_solar.py` - python code version of `forecast_solar.ipynb`
 - `up202511105_forecast.csv` – Submitted forecast (4296 lines)
 - `model_matrix.csv` – matriz de modelos (validação cruzada em blocos mensais, leads 1-24)
 - `requirements_used.md` – library versions
