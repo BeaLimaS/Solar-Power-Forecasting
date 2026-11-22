@@ -1,0 +1,16 @@
+ID;Model type;Variables;MSE (10^6 kW^2);RMSE (kW);NRMSE (%);MAE (kW);bias (kW);Skill vs B1 (%)
+B0;Climatologia (média mês x hora);month, hour;4.4695;2114.1263;15.6243;1228.7963;-105.4229;-50.5092
+B1;"Regressão linear (referência; leads 1-24, negativos = 0)";FS1;2.9696;1723.2544;12.7356;1023.2905;12.8932;0.0000
+M1;Regressão linear múltipla;FS2;2.0093;1417.5089;10.4760;803.2355;13.2824;32.3368
+M3;Ridge (alpha=100);FS4;1.7752;1332.3510;9.8467;789.8858;3.6885;40.2224
+M4;Random forest (300 árvores, prof. 9, folha 5, max_features 0.36);FS4;1.5475;1244.0023;9.1937;594.8798;0.6031;47.8873
+M5;Gradient boosting (370 árvores, lr 0.012, prof. 5, folha 84, subsample 0.73);FS4;1.5682;1252.2697;9.2548;617.1829;9.2853;47.1923
+M6;MLP (20, 10) (alpha 0.00216, lr 0.00012);FS4;1.4948;1222.6032;9.0356;653.0868;-2.1921;49.6647
+M9;MLP (20, 10) FS4, média de 10 sementes;FS4;1.4135;1188.9058;8.7865;572.8303;0.7813;52.4012
+M7;Média de M4 + M5 + M6;FS_ENS;1.4640;1209.9491;8.9421;599.4015;2.5654;50.7013
+M1-PP;Regressão linear múltipla + pós-proc. (noite=0, clip);FS2;1.9855;1409.0694;10.4136;718.6571;26.2696;33.1401
+M3-PP;Ridge (alpha=100) + pós-proc. (noite=0, clip);FS4;1.7297;1315.1703;9.7197;673.1528;4.8623;41.7541
+M4-PP;Random forest (300 árvores, prof. 9, folha 5, max_features 0.36) + pós-proc. (noite=0, clip);FS4;1.5475;1244.0028;9.1937;594.5785;0.2024;47.8873
+M5-PP;Gradient boosting (370 árvores, lr 0.012, prof. 5, folha 84, subsample 0.73) + pós-proc. (noite=0, clip);FS4;1.5676;1252.0366;9.2531;600.5220;-7.7565;47.2120
+M6-PP;MLP (20, 10) (alpha 0.00216, lr 0.00012) + pós-proc. (noite=0, clip);FS4;1.4653;1210.5097;8.9462;563.0419;3.3644;50.6556
+M7-PP;Média de M4 + M5 + M6 + pós-proc. (noite=0, clip);FS_ENS;1.4609;1208.6603;8.9325;570.2946;-2.2185;50.8063
